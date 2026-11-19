@@ -7,7 +7,7 @@ Self-managed Linux VPS in Germany and Finland. We publish small deployment examp
 | GitHub Codespaces or a persistent development machine | [Compare compute, storage and monthly VPS cost](https://motsell.com/en/vps-development?utm_source=github&utm_medium=profile&utm_campaign=developer_tools_20261119&utm_content=codespaces_calculator#calculator) |
 | A Telegram bot already running on Linux | [Проверить условия пилота переноса](https://motsell.com/ru/perenos-telegram-bota?utm_source=github&utm_medium=profile&utm_campaign=developer_tools_20261119&utm_content=bot_migration#request) · [Python/systemd example](https://github.com/motsell/motsell-telegram-bot-vps) |
 | Self-hosted n8n | [Compose starter and verified recovery notes](https://github.com/motsell/n8n-compose-starter) · [VPS configuration and costs](https://motsell.com/en/n8n-vps?utm_source=github&utm_medium=profile&utm_campaign=developer_tools_20261119&utm_content=n8n_vps#order) |
-| Moving a Docker Compose project | [Compose Check](https://github.com/motsell/compose-check) — an offline migration checklist |
+| Moving a Docker Compose project | [Compose Check on GitHub Marketplace](https://github.com/marketplace/actions/motsell-compose-migration-checklist) — free, offline migration review · [Docker VPS setup and plans](https://motsell.com/en/vps-docker?utm_source=github&utm_medium=profile&utm_campaign=compose_check_20261119&utm_content=marketplace_docker#order) |
 
 The examples are independent projects, not official integrations or managed hosting. Check each project's verification scope before deploying.
 
