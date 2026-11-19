@@ -8,6 +8,7 @@ Self-managed Linux VPS in Germany and Finland. We publish small deployment examp
 | A Telegram bot already running on Linux | [Проверить условия пилота переноса](https://motsell.com/ru/perenos-telegram-bota?utm_source=github&utm_medium=profile&utm_campaign=developer_tools_20261119&utm_content=bot_migration#request) · [Python/systemd example](https://github.com/motsell/motsell-telegram-bot-vps) |
 | Self-hosted n8n | [Compose starter and verified recovery notes](https://github.com/motsell/n8n-compose-starter) · [VPS configuration and costs](https://motsell.com/en/n8n-vps?utm_source=github&utm_medium=profile&utm_campaign=developer_tools_20261119&utm_content=n8n_vps#order) |
 | Moving a Docker Compose project | [Compose Check on GitHub Marketplace](https://github.com/marketplace/actions/motsell-compose-migration-checklist) — free, offline migration review · [Docker VPS setup and plans](https://motsell.com/en/vps-docker?utm_source=github&utm_medium=profile&utm_campaign=compose_check_20261119&utm_content=marketplace_docker#order) |
+| Moving a Next.js app from Vercel | [Plan a VPS migration: server rendering, environment variables, Blob/Cron and rollback](https://motsell.com/en/guides/vps-for-websites?utm_source=github&utm_medium=profile&utm_campaign=vercel_migration_20261120&utm_content=nextjs_checklist) |
 
 The examples are independent projects, not official integrations or managed hosting. Check each project's verification scope before deploying.
 
