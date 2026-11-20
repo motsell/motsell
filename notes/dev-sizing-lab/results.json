@@ -1,0 +1,274 @@
+{
+  "date": "2026-11-20",
+  "environment": {
+    "os": "Ubuntu 24.04.5 LTS",
+    "architecture": "ARM64",
+    "kernel": "6.8.0-147-generic",
+    "local_hypervisor": "Apple VZ / Lima",
+    "node": "v24.22.3",
+    "npm": "11.19.1",
+    "next": "Next.js v16.4.6",
+    "react": "19.3.1",
+    "typescript": "5.9.3",
+    "package_lock_sha256": "7bab5b5fe1cd474ff5140a7772effa4fc8c240074964a2d816b794cd2e160b7f",
+    "source_manifest_sha256": "ca4c5272f180cf437c7764134f85582d923c20c34450044ecc65ac37fc2aa580"
+  },
+  "methodology": {
+    "sequence": "A1 (2/4), B (4/8), A2 (2/4); same VM/disk, stopped resize",
+    "build_pairs": 3,
+    "sampling_interval_seconds": 0.1,
+    "memory_metric": "guest-wide Linux MemAvailable; sampled minimum, not peak process or cgroup memory",
+    "clean_run": "generated .next removed; OS/npm caches not flushed",
+    "repeat_warm": "same source and existing .next; cache hit not proven",
+    "initial_smoke": "assertion corrected for React markup comment boundary; original build results preserved and smoke rerun; build measurement unchanged",
+    "limits": "no production hardware, no load/IDE/AI model session; no causal CPU or RAM isolation; sequential host/cache/time effects"
+  },
+  "results": [
+    {
+      "block": "A1",
+      "cpus": 2,
+      "configured_ram_gib": 4,
+      "visible_ram_kib": 3998356,
+      "swap_total_kib": 0,
+      "builds": [
+        {
+          "attempt": 1,
+          "phase": "clean-run",
+          "seconds": 10.422,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3676296,
+          "guest_mem_available_min_sampled_kib": 2931808,
+          "guest_mem_available_after_kib": 3360916,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 1,
+          "phase": "repeat-warm",
+          "seconds": 4.05,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3360916,
+          "guest_mem_available_min_sampled_kib": 3218916,
+          "guest_mem_available_after_kib": 3417808,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 2,
+          "phase": "clean-run",
+          "seconds": 9.727,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3447048,
+          "guest_mem_available_min_sampled_kib": 2944064,
+          "guest_mem_available_after_kib": 3366924,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 2,
+          "phase": "repeat-warm",
+          "seconds": 3.845,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3366924,
+          "guest_mem_available_min_sampled_kib": 3222584,
+          "guest_mem_available_after_kib": 3452328,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 3,
+          "phase": "clean-run",
+          "seconds": 10.712,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3558112,
+          "guest_mem_available_min_sampled_kib": 2960200,
+          "guest_mem_available_after_kib": 3444132,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 3,
+          "phase": "repeat-warm",
+          "seconds": 7.058,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3444132,
+          "guest_mem_available_min_sampled_kib": 3287756,
+          "guest_mem_available_after_kib": 3460412,
+          "guest_oom_kill_delta": 0
+        }
+      ],
+      "runtime_smoke": {
+        "routes": {
+          "/": 200,
+          "/api/status": 200,
+          "/api/status_exact_json_no_store": true,
+          "/fixture.svg": 200,
+          "/notes/conclusion": 200,
+          "/notes/not-in-fixture": 404,
+          "/notes/overview": 200
+        },
+        "loopback_only": true,
+        "load_test": false
+      }
+    },
+    {
+      "block": "B",
+      "cpus": 4,
+      "configured_ram_gib": 8,
+      "visible_ram_kib": 8112404,
+      "swap_total_kib": 0,
+      "builds": [
+        {
+          "attempt": 1,
+          "phase": "clean-run",
+          "seconds": 3.928,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 7763852,
+          "guest_mem_available_min_sampled_kib": 7056584,
+          "guest_mem_available_after_kib": 7531544,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 1,
+          "phase": "repeat-warm",
+          "seconds": 1.313,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 7531544,
+          "guest_mem_available_min_sampled_kib": 7267944,
+          "guest_mem_available_after_kib": 7516976,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 2,
+          "phase": "clean-run",
+          "seconds": 3.223,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 7547248,
+          "guest_mem_available_min_sampled_kib": 6944640,
+          "guest_mem_available_after_kib": 7496500,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 2,
+          "phase": "repeat-warm",
+          "seconds": 1.407,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 7496500,
+          "guest_mem_available_min_sampled_kib": 7226044,
+          "guest_mem_available_after_kib": 7472828,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 3,
+          "phase": "clean-run",
+          "seconds": 3.024,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 7440232,
+          "guest_mem_available_min_sampled_kib": 6916384,
+          "guest_mem_available_after_kib": 7497672,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 3,
+          "phase": "repeat-warm",
+          "seconds": 1.311,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 7497672,
+          "guest_mem_available_min_sampled_kib": 7162368,
+          "guest_mem_available_after_kib": 7513692,
+          "guest_oom_kill_delta": 0
+        }
+      ],
+      "runtime_smoke": {
+        "routes": {
+          "/": 200,
+          "/api/status": 200,
+          "/api/status_exact_json_no_store": true,
+          "/fixture.svg": 200,
+          "/notes/conclusion": 200,
+          "/notes/not-in-fixture": 404,
+          "/notes/overview": 200
+        },
+        "loopback_only": true,
+        "load_test": false
+      }
+    },
+    {
+      "block": "A2",
+      "cpus": 2,
+      "configured_ram_gib": 4,
+      "visible_ram_kib": 3998420,
+      "swap_total_kib": 0,
+      "builds": [
+        {
+          "attempt": 1,
+          "phase": "clean-run",
+          "seconds": 4.626,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3710944,
+          "guest_mem_available_min_sampled_kib": 2962920,
+          "guest_mem_available_after_kib": 3582672,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 1,
+          "phase": "repeat-warm",
+          "seconds": 1.512,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3582672,
+          "guest_mem_available_min_sampled_kib": 3241976,
+          "guest_mem_available_after_kib": 3595712,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 2,
+          "phase": "clean-run",
+          "seconds": 3.819,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3625036,
+          "guest_mem_available_min_sampled_kib": 3077112,
+          "guest_mem_available_after_kib": 3686228,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 2,
+          "phase": "repeat-warm",
+          "seconds": 1.412,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3686228,
+          "guest_mem_available_min_sampled_kib": 3259584,
+          "guest_mem_available_after_kib": 3610628,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 3,
+          "phase": "clean-run",
+          "seconds": 3.928,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3618452,
+          "guest_mem_available_min_sampled_kib": 3077672,
+          "guest_mem_available_after_kib": 3626200,
+          "guest_oom_kill_delta": 0
+        },
+        {
+          "attempt": 3,
+          "phase": "repeat-warm",
+          "seconds": 1.412,
+          "exit_code": 0,
+          "guest_mem_available_before_kib": 3626200,
+          "guest_mem_available_min_sampled_kib": 3260368,
+          "guest_mem_available_after_kib": 3616392,
+          "guest_oom_kill_delta": 0
+        }
+      ],
+      "runtime_smoke": {
+        "routes": {
+          "/": 200,
+          "/api/status": 200,
+          "/api/status_exact_json_no_store": true,
+          "/fixture.svg": 200,
+          "/notes/conclusion": 200,
+          "/notes/not-in-fixture": 404,
+          "/notes/overview": 200
+        },
+        "loopback_only": true,
+        "load_test": false
+      }
+    }
+  ]
+}
