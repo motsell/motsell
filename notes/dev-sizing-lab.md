@@ -38,4 +38,6 @@ From the parent directory, run `python3 benchmark.py 2c4g` on the 2 CPU / 4 GiB 
 
 Choosing a server for development? [Compare live VPS plans and monthly costs](https://motsell.com/en/vps-development?utm_source=github&utm_medium=repository&utm_campaign=dev_sizing_20261120&utm_content=report#calculator). Select a plan based on your own workload; these observations are not a guarantee about MOTSELL hardware or third-party service availability.
 
+Moving a website? [Check memory and disk before choosing a VPS](https://motsell.com/en/guides/vps-for-websites?utm_source=github&utm_medium=repository&utm_campaign=dev_sizing_20261120&utm_content=website_guide). The guide covers what to measure with a web app, API and database running together.
+
 MOTSELL Engineering operates a VPS service. AI assisted with building the synthetic fixture, test automation and drafting; the observations were executed and independently checked.
