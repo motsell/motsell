@@ -42,6 +42,19 @@ docker --host "unix://$scratch/no-daemon.sock" compose \
 
 The second run in each directory added `--project-name migration-drill` before `config`. Inspect `.name` and `.volumes.pgdata.name` in the JSON. Ensure `$scratch` points to your own temporary directory and the socket does not exist; `$directory` is the extracted starter directory. Never publish a resolved Compose configuration from a real project: it can contain expanded secrets.
 
+## Compare the two resolved configurations
+
+On 25 November we repeated the four normalization runs and compared the resulting files with the released [Compose Check 0.2.0](https://github.com/motsell/compose-check/releases/tag/v0.2.0).
+
+| Configuration pair | Changed physical volume names | Changed physical network names | Other review cues |
+| --- | ---: | ---: | --- |
+| Default project names | 3 | 2 | Project name, build context, bind mount source |
+| Same explicit project name | 0 | 0 | Build context, bind mount source |
+
+The explicit project name removed the volume and network name changes. It did not remove the differences in local file paths. Both comparisons exited with code 1, indicating important review cues, not a failed restore.
+
+To compare your own private normalized JSON files, use the [offline browser tool](https://motsell.com/tools/motsell-compose-check-en.html?utm_source=github&utm_medium=repository&utm_campaign=compose_check_20261119&utm_content=project_name_compare) or install the reviewed release package from GitHub. The npm registry's 0.1.0 version still checks a single snapshot; comparison requires 0.2.0. No Docker daemon or database was started in this test.
+
 ## Why this matters before a migration
 
 On the same Docker host, a new project name can allocate a different volume if that name does not exist. The old volume may still be present. Check the original project identity and actual volume names before redeployment; do not remove the old volume while investigating.
